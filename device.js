@@ -13,7 +13,8 @@
 	  var userAgent = (userAgent || navigator.userAgent).toLowerCase();
 	  var platform = (platform || navigator.platform).toLowerCase();	 
 	  var language = language || navigator.language || navigator.browserLanguage;
-
+	  // is mobile browser !!(agent.match(/(iPhone|iPod|blackberry|android 0.5|htc|lg|midp|mmp|mobile|nokia|opera mini|palm|pocket|psp|sgh|smartphone|symbian|treo mini|Playstation Portable|SonyEricsson|Samsung|MobileExplorer|PalmSource|Benq|Windows Phone|Windows Mobile|IEMobile|Windows CE|Nintendo Wii)/i));
+	  // is tablet agent.match(/(iPad|SCH-I800|xoom|kindle|meego)/i
 	  // Gibberish at the end is to determine when the browser version is done
 	  version = browser.version = (userAgent.match( /.*(?:rv|chrome|webkit|opera|ie)[\/: ](.+?)([ \);]|$)/ ) || [])[1];
 	  webkitVersion = (userAgent.match( /webkit\/(.+?) / ) || [])[1];
@@ -206,7 +207,30 @@
 	    @type Boolean
 	  */
 	  browser.meego = !!/meego/.test(userAgent) || !!/arora/.test(userAgent);
+	 /**
+	    @name browser.nokia
+	    @type Boolean
+	  */
+	  browser.nokia = !!/nokia/.test(userAgent);
+	 /**
+	    @name browser.uc
+	    @type Boolean
+	  */
+	  browser.uc = !!/ucweb/.test(userAgent);
 
+	 /**
+	    @name browser.xoom
+	    @type Boolean
+	  */
+	  browser.xoom = !!/xoom/.test(userAgent);
+	 /**
+	    @name browser.kindle
+	    @type Boolean
+	  */
+	  browser.kindle = !!/kindle/.test(userAgent);
+	
+
+	
 	  /**
 	    @name browser.language
 	    @type String
