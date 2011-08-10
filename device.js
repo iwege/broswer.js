@@ -229,7 +229,7 @@
 	  */
 	  browser.kindle = !!/kindle/.test(userAgent);
 	
-
+	  browser.
 	
 	  /**
 	    @name browser.language
